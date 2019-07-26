@@ -4,7 +4,7 @@ const createResultHTML = (restaurants) => {
         <section>
             <h2>${restaurants.name}</h2>
             <p>${restaurants.cuisines}</p>
-           
+            <p>${restaurants.location.address}</p>
         </section>
     `
 }

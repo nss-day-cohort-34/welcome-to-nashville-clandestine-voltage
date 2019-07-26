@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Welcome to Nashville</title>
+</head>
+<body>
+    <article class="search">
+        <h1>Search for Stuff to Do in Nashville</h1>
+        <h3>Choose a park by activity:</h3>
+        <select name="Parks" id="parks_features">
+            <option value="?playground=Yes">Playground</option>
+            <option value="?nature_center=Yes">Nature Centers</option>
+            <option value="?picnic_shelters=Yes">Picnic Shelters</option>
+            <option value="?dog_park=Yes">Dog Park</option>
+            <option value="?hiking_trails=Yes">Hiking</option>
+            <option value="?fishing_by_permit=Yes">Fishing</option>
+            </select>
+        <button type="button" id="parkSearch">Search</button>  
+    </article>
+    <article class="results"></article>
+    <article class="itinerary">
+        <h2>MY ITINERARY</h2>
+        <h3 id="parkItinerary">Park:</h3>
+        <h3 id="restaurantItinerary">Restaurant:</h3>
+        <h3 id="concertItinerary">Concert:</h3>
+ 
+    </article>
+    
+    <script src="data.js"></script>
+    <script src="factory.js"></script>
+    <script src="dom.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

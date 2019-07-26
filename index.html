@@ -7,48 +7,48 @@
    <title>Document</title>
 </head>
 <body>
-       <h3>Choose concert by genre:</h3>
-   <select name="wgtmsr" id="select">
-       <option value="rock">Rock</option>
-       <option value="metal">Metal</option>
-       <option value="punk">Punk</option>
-       <option value="pop">Pop</option>
-       <option value="country">Country</option>
-       <option value="rap">Rap</option>
+        <h3>Choose concert by genre:</h3>
+    <select name="wgtmsr" id="select">
+        <option value="rock">Rock</option>
+        <option value="metal">Metal</option>
+        <option value="punk">Punk</option>
+        <option value="pop">Pop</option>
+        <option value="country">Country</option>
+        <option value="rap">Rap</option>
+        
+    </select>
+    <button id="searchButton">Search</button>
+    
+    <h3>Choose a park by activity:</h3>
+    <select name="Parks" id="parks_features">
+        <option value="?playground=Yes">Playground</option>
+        <option value="?nature_center=Yes">Nature Centers</option>
+        <option value="?picnic_shelters=Yes">Picnic Shelters</option>
+        <option value="?dog_park=Yes">Dog Park</option>
+        <option value="?hiking_trails=Yes">Hiking</option>
+        <option value="?fishing_by_permit=Yes">Fishing</option>
+        </select>
+    <button type="button" id="parkSearch">Search</button> 
+    
+    <article id="results" class="results hide">
+        <h2>RESULTS</h2>
+        <button id="clearButton">Clear Results</button>
+        
+        
 
-   </select>
-   <button id="searchButton">Search</button>
+    </article>
+    
+    <article class="itinerary">
+        <h2>MY ITINERARY</h2>
+        <h3 id="parkItinerary">Park:</h3>
+        <h3 id="restaurantItinerary">Restaurant:</h3>
+        <h3 id="concertItinerary">Concert:</h3>
 
-   <h3>Choose a park by activity:</h3>
-   <select name="Parks" id="parks_features">
-       <option value="?playground=Yes">Playground</option>
-       <option value="?nature_center=Yes">Nature Centers</option>
-       <option value="?picnic_shelters=Yes">Picnic Shelters</option>
-       <option value="?dog_park=Yes">Dog Park</option>
-       <option value="?hiking_trails=Yes">Hiking</option>
-       <option value="?fishing_by_permit=Yes">Fishing</option>
-       </select>
-   <button type="button" id="parkSearch">Search</button>
+    </article>
 
-   <article id="results" class="results hide">
-       <h2>RESULTS</h2>
-       <button id="clearButton">Clear Results</button>
-
-
-
-   </article>
-
-   <article class="itinerary">
-       <h2>MY ITINERARY</h2>
-       <h3 id="parkItinerary">Park:</h3>
-       <h3 id="restaurantItinerary">Restaurant:</h3>
-       <h3 id="concertItinerary">Concert:</h3>
-
-   </article>
-
-   <script src="data.js"></script>
-   <script src="factory.js"></script>
-   <script src="dom.js"></script>
-   <script src="main.js"></script>
+    <script src="data.js"></script>
+    <script src="factory.js"></script>
+    <script src="dom.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

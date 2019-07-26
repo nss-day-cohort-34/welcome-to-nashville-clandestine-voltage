@@ -9,3 +9,12 @@ const createParkHTML = (park) => {
         </section>
     `
 }
+
+const createItineraryPark = (name, address) => {
+    return `
+        <section>
+            <h2>${name}</h2>
+            <h3>${address}</h3>
+        </section>
+    `
+}

@@ -1,7 +1,7 @@
 const concertSearchButton = document.querySelector("#searchButton")
 const concertSelect = document.querySelector("#select")
 const concertSaveButton = document.querySelectorAll(".concertSaveButton")
-const concertResultsInDOM = document.querySelector("#results")
+const concertResultsInDOM = document.getElementById("concertResults")
 const clearButton = document.querySelector("#clearButton")
 
 
@@ -31,3 +31,5 @@ concertResultsInDOM.addEventListener("click", (event) => {
         renderConcertItinerary(concertItineraryHTML)
     }
 })
+
+

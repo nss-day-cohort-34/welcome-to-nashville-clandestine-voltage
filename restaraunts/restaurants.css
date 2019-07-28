@@ -1,0 +1,134 @@
+/*------------------------------------
+  Base Styles
+------------------------------------*/
+
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('fonts/abolition-regular-webfont.eot');
+    src: url('fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/abolition-regular-webfont.woff') format('woff'), url('fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #878787;
+    margin: 0;
+    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+    font-family: Abolition Regular, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 5.625rem;
+    /* 90px/16px  */
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+    margin: 12px 0 0;
+}
+
+h2 {
+    font-size: 3.3125em;
+    /* 53px/16px  */
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 1em 0 .5em;
+    /* 0 0 26px */
+    }
+
+h3 {
+    font-size: 1.25em;
+    /* 20px/16px  */
+    color: #48525c;
+    line-height: 1.2;
+    margin:2em 0 .5em;
+    /* 34px */
+}
+
+.header {
+    padding-top: 200px;
+    height: 600px;
+    background: linear-gradient( #76AFF4, transparent 90%), linear-gradient(0deg, #fff, transparent), #76AFF4 url("images/nash.jpg") no-repeat center;
+    background-size: cover;
+}
+.title {
+    color: white;
+    font-size: 1.625rem; /* 26px/16px */
+    letter-spacing: .065em;
+    font-weight:200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+  
+  }
+
+h1 {
+    font-size: 5.625rem;
+    /* 90px/16px  converts pixels to em's proportionally*/
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+    margin: 12px 0 0;
+    padding-top: 10px;
+}
+
+.intro {
+    font-size: 1.25em;
+    /* 20px/16px */
+    line-height: 1.6;
+}
+
+h1,.primary-content, .header, .main-footer {
+    text-align: center;
+}
+
+.content-wrapper {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.t-border {
+    border-top: 2px solid #dfe2e6;
+}
+input, select {
+    width:25%;
+    height: 30px;
+    border-color:#76AFF4;
+    margin-right: .5em;
+}
+button {
+    width:15%;
+    height: 30px;
+    background-color: #76AFF4;
+    color:white;
+}
+a:link,
+a:visited{
+    color:#76AFF4;
+}
+a:hover {
+    color: rgb(3, 31, 65);
+}
+.main-footer {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: linear-gradient( #fff, transparent), linear-gradient(0deg, #76AFF4, transparent 100%);
+    color: #76AFF4;
+}
+a {
+    float:right;
+    margin-right: 20px;
+   
+}
+.footer__copyright {
+    color: white;
+    float:left;
+    margin-left: 20px;
+}

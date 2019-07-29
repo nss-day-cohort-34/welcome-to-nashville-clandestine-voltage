@@ -30,13 +30,13 @@ parkResultsDOM.addEventListener("click", (event) => {
     }
 })
 
-const removeEl = document.querySelector("#thingToDelete")
-const containerEl = document.querySelector("#container")
-const deleteButton = document.querySelector("#deleteButton")
+// const removeEl = document.querySelector("#thingToDelete")
+// const containerEl = document.querySelector("#container")
+// const deleteButton = document.querySelector("#deleteButton")
 
-deleteButton.addEventListener("click", () => {
-    containerEl.removeChild(removeEl)
-})
+// deleteButton.addEventListener("click", () => {
+//     containerEl.removeChild(removeEl)
+// })
 
 
 

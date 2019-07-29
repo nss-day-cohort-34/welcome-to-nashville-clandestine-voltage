@@ -6,5 +6,5 @@ const renderPark = (htmlstring) => {
 }
 
 const renderParkItinerary = (htmlString) => {
-    parkItineraryReference.innerHTML += htmlString
+    parkItineraryReference.innerHTML = htmlString
 } 

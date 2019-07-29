@@ -22,11 +22,14 @@
 
     <h3>Choose a park by activity:</h3>
     <select name="Parks" id="parks_features">
+        <option value="" disabled selected>Select your park feature</option>
+        <option value="?swimming_pool=Yes">Swimming</option>
+        <option value="?hiking_trails=Yes">Hiking</option>
         <option value="?playground=Yes">Playground</option>
         <option value="?nature_center=Yes">Nature Centers</option>
         <option value="?picnic_shelters=Yes">Picnic Shelters</option>
         <option value="?dog_park=Yes">Dog Park</option>
-        <option value="?hiking_trails=Yes">Hiking</option>
+        <option value="?mountain_bike_trails=Yes">Mountain Biking</option>
         <option value="?fishing_by_permit=Yes">Fishing</option>
         </select>
     <button type="button" id="parkSearch">Search</button> 
@@ -49,7 +52,8 @@
     
     <article class="itinerary">
         <h2>MY ITINERARY</h2>
-        <h3 id="parkItinerary">Park:</h3>
+        <h3>Park:</h3>
+        <h4 id="parkItinerary"></h4>
         <h3 id="restaurantItinerary">Restaurant:</h3>
         <h3 id="concertItinerary">Concert:</h3>
 

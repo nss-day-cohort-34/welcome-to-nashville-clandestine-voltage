@@ -6,5 +6,5 @@ const renderConcert = (htmlString) => {
 }
 
 const renderConcertItinerary = (htmlString) => {
-    concertItineraryReference.innerHTML += htmlString
+    concertItineraryReference.innerHTML = htmlString
 }

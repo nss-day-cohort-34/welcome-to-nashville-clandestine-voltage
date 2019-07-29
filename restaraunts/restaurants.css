@@ -40,14 +40,14 @@ h2 {
     line-height: 1.1;
     margin: 1em 0 .5em;
     /* 0 0 26px */
-    }
+}
 
 h3 {
     font-size: 1.25em;
     /* 20px/16px  */
     color: #48525c;
     line-height: 1.2;
-    margin:2em 0 .5em;
+    margin: 2em 0 .5em;
     /* 34px */
 }
 
@@ -57,15 +57,16 @@ h3 {
     background: linear-gradient( #76AFF4, transparent 90%), linear-gradient(0deg, #fff, transparent), #76AFF4 url("images/nash.jpg") no-repeat center;
     background-size: cover;
 }
+
 .title {
     color: white;
-    font-size: 1.625rem; /* 26px/16px */
+    font-size: 1.625rem;
+    /* 26px/16px */
     letter-spacing: .065em;
-    font-weight:200;
+    font-weight: 200;
     border-bottom: 2px solid;
     padding-bottom: 10px;
-  
-  }
+}
 
 h1 {
     font-size: 5.625rem;
@@ -85,7 +86,7 @@ h1 {
     line-height: 1.6;
 }
 
-h1,.primary-content, .header, .main-footer {
+h1, .primary-content, .header, .main-footer {
     text-align: center;
 }
 
@@ -97,38 +98,58 @@ h1,.primary-content, .header, .main-footer {
 .t-border {
     border-top: 2px solid #dfe2e6;
 }
+
 input, select {
-    width:25%;
+    width: 25%;
     height: 30px;
-    border-color:#76AFF4;
+    border-color: #76AFF4;
     margin-right: .5em;
+    border-radius: 4px;
 }
+
 button {
-    width:15%;
+    width: 15%;
     height: 30px;
     background-color: #76AFF4;
-    color:white;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
 }
-a:link,
-a:visited{
-    color:#76AFF4;
+
+button:hover {
+    box-shadow: 3px 3px 10px #48525c;
 }
+
+#clearButton, #printButton {
+    margin-top: .5em;
+}
+
+.results {
+    padding: .5em 0;
+}
+
+a:link, a:visited {
+    color: #76AFF4;
+}
+
 a:hover {
     color: rgb(3, 31, 65);
 }
+
 .main-footer {
     padding-top: 80px;
     padding-bottom: 50px;
     background: linear-gradient( #fff, transparent), linear-gradient(0deg, #76AFF4, transparent 100%);
     color: #76AFF4;
 }
+
 a {
-    float:right;
+    float: right;
     margin-right: 20px;
-   
 }
+
 .footer__copyright {
     color: white;
-    float:left;
+    float: left;
     margin-left: 20px;
 }

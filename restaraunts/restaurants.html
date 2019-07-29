@@ -29,7 +29,6 @@
             <option value="pop">Pop</option>
             <option value="country">Country</option>
             <option value="rap">Rap</option>
-
         </select>
         <button id="searchButton">Search</button>
 
@@ -44,24 +43,17 @@
         </select>
         <button type="button" id="parkSearch">Search</button>
 
-        <h3>Restaurant by Food Type:</h3>
-        <select name="rest" id="select">
-            <option value=></option>
-            <option value=></option>
-            <option value=></option>
-            <option value=></option>
-            <option value=></option>
-            <option valu></option>
-
-        </select>
-        <button id="searchButton">Search</button>
+        <h3>Restaurant by Name:</h3>
+    <input type="text" name= "restaurantSearch" id="restaurantSearch" placeholder="Restaurant Name">
+        <button id="restaurantSearchButton">Search</button>
 
         <article id="results" class="results hide">
             <h2>Results:</h2>
+            <div class="results" id="concertResults"></div>
+            <div class="results" id="parkResults"></div>
+            <div class="results" id="restaurantResults"></div>
+
             <button id="clearButton">Clear Results</button>
-
-
-
         </article>
 
         <article class="itinerary">
@@ -70,7 +62,7 @@
             <h3 id="parkItinerary">Park:</h3>
             <h3 id="restaurantItinerary">Restaurant:</h3>
         </article>
-        <button type="button" id="print">Print this page</button>
+        <button type="button" id="printButton">Print this page</button>
     </div>
 
     <!--close content-wrapper  -->

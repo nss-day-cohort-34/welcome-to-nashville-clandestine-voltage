@@ -1,3 +1,15 @@
+Welcome to Nashville, Clandestine Voltage
+
+ReadMe:
+
+To use or modify the app, download the repository and be sure to have all of the subfolders included in your local repository. App runs from index.html but has references to JavaScript files within the sub-folders. 
+
+Authors: 
+
+Kelly Coles, Bennett Foster and Brian Wilson
+
+
+
 # Welcome to Nashville: Build an itinerary for a day trip to Music City
 
 In this app users can search for four different things to do/visit in Nashville:

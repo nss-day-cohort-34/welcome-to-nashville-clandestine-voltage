@@ -14,8 +14,8 @@ const createResultHTML = (restaurants) => {
 const createItineraryRestaurant = (name, address) => {
     return `
     <section>
-        <h2>${name}</h2>
-        <h3>${address}</h3>
+        <p>${name}</p>
+        <p>${address}</p>
     </section>
 `
 }

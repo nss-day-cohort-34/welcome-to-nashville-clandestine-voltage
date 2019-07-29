@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="restaurants.css">
+    <title>Kelly&apos;s Index</title>
+</head>
+
+<body>
+    <header id="top" class="header">
+        <span class="title">A Visitors Guide to Music City</span>
+        <h1>Welcome To Nashville</h1>
+    </header>
+    <div class="content-wrapper t-border primary-content">
+        <p class="intro">
+            Welcome to Nashville is the official city guide to assist with planning a day in Music City. It’s designed
+            to help you explore key events during each season of the year, provide insider tips on what to see & do, and
+            provide the best lists and resources available to help plan your best experience yet in this must-see city!
+        </p>
+        <h2>Choices:</h2>
+        <h3>Concert by Genre:</h3>
+        <select name="wgtmsr" id="select">
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="punk">Punk</option>
+            <option value="pop">Pop</option>
+            <option value="country">Country</option>
+            <option value="rap">Rap</option>
+        </select>
+        <button id="searchButton">Search</button>
+
+        <h3>Park by Activity:</h3>
+        <select name="Parks" id="parks_features">
+            <option value="?playground=Yes">Playground</option>
+            <option value="?nature_center=Yes">Nature Centers</option>
+            <option value="?picnic_shelters=Yes">Picnic Shelters</option>
+            <option value="?dog_park=Yes">Dog Park</option>
+            <option value="?hiking_trails=Yes">Hiking</option>
+            <option value="?fishing_by_permit=Yes">Fishing</option>
+        </select>
+        <button type="button" id="parkSearch">Search</button>
+
+        <h3>Restaurant by Name:</h3>
+    <input type="text" name= "restaurantSearch" id="restaurantSearch" placeholder="Restaurant Name">
+        <button id="restaurantSearchButton">Search</button>
+
+        <article id="results" class="results hide">
+            <h2>Results:</h2>
+            <div class="results" id="concertResults"></div>
+            <div class="results" id="parkResults"></div>
+            <div class="results" id="restaurantResults"></div>
+
+            <button id="clearButton">Clear Results</button>
+        </article>
+
+        <article class="itinerary">
+            <h2>Itinerary:</h2>
+            <h3>Concert:</h3>
+            <p id="concertItinerary"></p>
+            <h3>Park:</h3>
+            <p id="parkItinerary"></p>
+            <h3>Retaurant:</h3>
+            <p id="restaurantItinerary"></p>
+        </article>
+        <button type="button" id="printButton">Print this page</button>
+    </div>
+
+    <!--close content-wrapper  -->
+    <a href="#top">Back to top &raquo;</a>
+    <footer class="main-footer">
+        <p class="footer__copyright"> clandestine-voltage &copy; 2019</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="factory.js"></script>
+    <script src="dom.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

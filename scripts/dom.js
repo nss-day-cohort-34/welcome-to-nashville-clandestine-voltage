@@ -26,7 +26,7 @@ const concertSaveButton = document.querySelectorAll(".concertSaveButton")
 
 
 const clearButton = document.querySelector("#clearButton")
-
+const clearItineraryButton= document.querySelector("#clearItineraryButton")
 
 
 // Functions that take an HTML string and render it to the DOM at the specified location

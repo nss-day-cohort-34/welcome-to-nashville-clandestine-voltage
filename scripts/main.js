@@ -92,3 +92,19 @@ concertResultsInDOM.addEventListener("click", (event) => {
         renderConcertItinerary(concertItineraryHTML)
     }
 })
+
+
+
+clearButton.addEventListener("click",()=>{
+
+    concertResultsInDOM.innerText = ""
+    parkResultsDOM.innerText = ""
+    restaurantResults.innerText = ""
+})
+
+clearItineraryButton.addEventListener("click",()=>{
+
+    concertItineraryReference.innerText = ""
+    parkItineraryReference.innerText = ""
+    restaurantItineraryReference.innerText = ""
+})

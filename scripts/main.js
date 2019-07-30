@@ -2,18 +2,17 @@
 //Event listeners for search buttons, which invoke the fecth, factory and render results functions.
 
 restaurantSearchButton.addEventListener("click", () => {
-    if (results.restaurants == 0 || results.restaurants == "undefined" || results.restaurants == "null") {
-        alert("Restaurant not found. Try another!")
-    }
     getRestaurantData(restaurantSearch.value).then((results) => {
         console.log(results.restaurants)
         for (let item of results.restaurants) {
             const foodHTML = createResultHTML(item)
             renderRestaurant(foodHTML)
         }
-
+        if (results.restaurants == 0 || results.restaurants == "undefined" || results.restaurants == "null") {
+            alert("Restaurant not found. Try another!")
+        }
     })
-
+    
 })
 
 

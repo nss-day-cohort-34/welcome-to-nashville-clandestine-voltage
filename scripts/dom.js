@@ -29,30 +29,30 @@ const clearButton = document.querySelector("#clearButton")
 const clearItineraryButton= document.querySelector("#clearItineraryButton")
 
 
-// Functions that take an HTML string and render it to the DOM at the specified location
+// Functions that take an HTML string and render search results to the DOM at the specified location
 const renderRestaurant = (htmlString) => {
     restaurantResults.innerHTML += htmlString
 }
-const renderRestaurantItinerary = (htmlString) => {
-    restaurantItineraryReference.innerHTML = htmlString
-}
-
 
 
 const renderPark = (htmlstring) => {
     parkResultsDOM.innerHTML += htmlstring
 }
 
-const renderParkItinerary = (htmlString) => {
-    parkItineraryReference.innerHTML = htmlString
-} 
-
-
-
 const renderConcert = (htmlString) => {
     concertResultsInDOM.innerHTML += htmlString
 }
 
+
+// Functions that take an HTML string and render Itinerary saves to the DOM
 const renderConcertItinerary = (htmlString) => {
     concertItineraryReference.innerHTML = htmlString
 }
+
+const renderRestaurantItinerary = (htmlString) => {
+    restaurantItineraryReference.innerHTML = htmlString
+}
+
+const renderParkItinerary = (htmlString) => {
+    parkItineraryReference.innerHTML = htmlString
+} 

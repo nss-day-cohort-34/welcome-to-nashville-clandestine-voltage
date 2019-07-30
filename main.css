@@ -54,6 +54,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin: 50px;
+    max-width: 300px;
+    min-width: 300px;
 }
 
 .itinerary__items {
@@ -66,6 +68,7 @@ body {
     padding: 10px;
     margin: 10px 20px;
     max-width: 300px;
+    min-width: 300px;
     background-color: #e7f1fd;
     border-radius: 10px;
 }
@@ -141,11 +144,11 @@ h1 {
 h1, .primary-content, .header, .main-footer {
     text-align: center;
 }
-
+/* 
 .content-wrapper {
     width: 80%;
     margin: 1em auto;
-}
+} */
 
 .t-border {
     border-top: 2px solid #dfe2e6;

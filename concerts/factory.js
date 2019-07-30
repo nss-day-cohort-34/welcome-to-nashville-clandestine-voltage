@@ -44,7 +44,7 @@ const createResultsConcert = (concert) => {
 
 const createItineraryRestaurant = (name, address) => {
     return `
-    <section>
+    <section class="itinerary__section">
         <h3>${name}</h3>
         <h4>${address}</h4>
     </section>

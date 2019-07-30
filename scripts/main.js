@@ -1,70 +1,32 @@
 
-//Declare variables that store references to locations in the DOM that will have some kind of functionality 
+//Event listeners for search buttons, which invoke the fecth, factory and render results functions.
 
 restaurantSearchButton.addEventListener("click", () => {
     if (results.restaurants == 0 || results.restaurants == "undefined" || results.restaurants == "null") {
         alert("Restaurant not found. Try another!")
     }
-  getRestaurantData(restaurantSearch.value).then((results) => {
-    console.log(results.restaurants)
-    for (let item of results.restaurants) {
-      const foodHTML = createResultHTML(item)
-      renderRestaurant(foodHTML)
-    }
+    getRestaurantData(restaurantSearch.value).then((results) => {
+        console.log(results.restaurants)
+        for (let item of results.restaurants) {
+            const foodHTML = createResultHTML(item)
+            renderRestaurant(foodHTML)
+        }
 
-  })
+    })
 
 })
-
-// print button
-document.getElementById("printButton").addEventListener("click", function () {
-  window.print();
-})
-
-
- 
-restaurantResults.addEventListener("click", (event) => {
-  if (event.target.tagName === 'BUTTON') {
-      const button = event.target
-      const restaurantAddress = button.previousElementSibling
-      const restaurantName = restaurantAddress.previousElementSibling
-      let restaurantItineraryName = restaurantName.innerText
-      let restaurantItineraryAddress = restaurantAddress.innerText
-      const restaurantItineraryHTML = createItineraryRestaurant(restaurantItineraryName, restaurantItineraryAddress)
-      renderRestaurantItinerary(restaurantItineraryHTML)
-  }
-})
-
-
 
 
 parkSearchButton.addEventListener("click", () => {
     getParkData(parkSelect.value)
-    .then((parks) => {
-       for (let park of parks) {
-            let parksHTML = createParkHTML(park)
-            renderPark(parksHTML)
-          
-        }
-    })
+        .then((parks) => {
+            for (let park of parks) {
+                let parksHTML = createParkHTML(park)
+                renderPark(parksHTML)
+
+            }
+        })
 })
-
-parkResultsDOM.addEventListener("click", (event) => {
-    if (event.target.tagName === 'BUTTON') {
-        const button = event.target
-        const parkAddress = button.previousElementSibling
-        const parkName = parkAddress.previousElementSibling
-       
-        let parkItineraryName = parkName.innerText
-        let parkItineraryAddress = parkAddress.innerText
-       
-        const parkItineraryHTML = createItineraryPark(parkItineraryName, parkItineraryAddress)
-        renderParkItinerary(parkItineraryHTML)
-    }
-})
-
-
-
 
 
 concertSearchButton.addEventListener("click", () => {
@@ -74,8 +36,43 @@ concertSearchButton.addEventListener("click", () => {
                 let concertHTML = createResultsConcert(concert)
                 renderConcert(concertHTML)
             }
-    
-    })
+
+        })
+})
+
+
+
+// Event listeners for save buttons, which use DOM traversal to get 
+// the inner text of the results HTML elements and print them to the DOM 
+// using the factory and render functions for the itinerary.
+
+
+restaurantResults.addEventListener("click", (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        const button = event.target
+        const restaurantAddress = button.previousElementSibling
+        const restaurantName = restaurantAddress.previousElementSibling
+        let restaurantItineraryName = restaurantName.innerText
+        let restaurantItineraryAddress = restaurantAddress.innerText
+        const restaurantItineraryHTML = createItineraryRestaurant(restaurantItineraryName, restaurantItineraryAddress)
+        renderRestaurantItinerary(restaurantItineraryHTML)
+    }
+})
+
+
+
+parkResultsDOM.addEventListener("click", (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        const button = event.target
+        const parkAddress = button.previousElementSibling
+        const parkName = parkAddress.previousElementSibling
+
+        let parkItineraryName = parkName.innerText
+        let parkItineraryAddress = parkAddress.innerText
+
+        const parkItineraryHTML = createItineraryPark(parkItineraryName, parkItineraryAddress)
+        renderParkItinerary(parkItineraryHTML)
+    }
 })
 
 
@@ -94,17 +91,23 @@ concertResultsInDOM.addEventListener("click", (event) => {
 })
 
 
-
-clearButton.addEventListener("click",()=>{
+//Clear results button event listener
+clearButton.addEventListener("click", () => {
 
     concertResultsInDOM.innerText = ""
     parkResultsDOM.innerText = ""
     restaurantResults.innerText = ""
 })
 
-clearItineraryButton.addEventListener("click",()=>{
+//Clear itinerary event listener
+clearItineraryButton.addEventListener("click", () => {
 
     concertItineraryReference.innerText = ""
     parkItineraryReference.innerText = ""
     restaurantItineraryReference.innerText = ""
+})
+
+// print button
+document.getElementById("printButton").addEventListener("click", function () {
+    window.print();
 })

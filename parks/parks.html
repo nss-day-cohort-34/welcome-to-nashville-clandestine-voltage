@@ -1,75 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Welcome to Nashville</title>
 </head>
+
 <body>
-        <h3>Choose concert by genre:</h3>
-    <select name="wgtmsr" id="select">
-        <option value="rock">Rock</option>
-        <option value="metal">Metal</option>
-        <option value="punk">Punk</option>
-        <option value="pop">Pop</option>
-        <option value="country">Country</option>
-        <option value="rap">Rap</option>
-        
-    </select>
-    <button id="searchButton">Search</button>
-     <button class="clearConcertButton">Clear Results</button>
+    <header id="top" class="header">
+        <span class="title">A Visitors Guide to Music City</span>
+        <h1>Welcome To Nashville</h1>
+    </header>
+    <div class="wrapper">
+        <div class="content-wrapper t-border primary-content">
+            <p class="intro">
+                Welcome to Nashville is the official city guide to assist with planning a day in Music City. It’s
+                designed
+                to help you explore key events during each season of the year, provide insider tips on what to see & do,
+                and
+                provide the best lists and resources available to help plan your best experience yet in this must-see
+                city!
+            </p>
+            <h2>Choices:</h2>
+            <div class="search__container">
+                <div class="search__item">
+                    <h3>Concert by Genre:</h3>
+                    <select name="Concerts" id="select">
+                        <option disabled selected>Select your genre of music</option>
+                        <option value="rock">Rock</option>
+                        <option value="metal">Metal</option>
+                        <option value="punk">Punk</option>
+                        <option value="pop">Pop</option>
+                        <option value="country">Country</option>
+                        <option value="bluegrass">Bluegrass</option>
+                        <option value="rap">Rap</option>
+                    </select>
+                    <button id="concertSearchButton">Search</button>
+                </div>
 
-    <h3>Choose a park by activity:</h3>
-    <select name="Parks" id="parks_features">
-        <option value="" disabled selected>Select your park feature</option>
-        <option value="?swimming_pool=Yes">Swimming</option>
-        <option value="?hiking_trails=Yes">Hiking</option>
-        <option value="?playground=Yes">Playground</option>
-        <option value="?nature_center=Yes">Nature Centers</option>
-        <option value="?picnic_shelters=Yes">Picnic Shelters</option>
-        <option value="?dog_park=Yes">Dog Park</option>
-        <option value="?mountain_bike_trails=Yes">Mountain Biking</option>
-        <option value="?fishing_by_permit=Yes">Fishing</option>
-        </select>
-    <button type="button" id="parkSearch">Search</button> 
-    <button class="clearParksButton">Clear Results</button>
-
-    <article id="parkResults" class="parkResults hide">
-        <h2>PARK RESULTS</h2>
-       
-     </article>
-     
-     <article id="restarauntResults" class="restarauntResults hide">
-        <h2>RESTARAUNT RESULTS</h2>
-        
-     </article>
-     
-     <article id="concertResults" class="concertResults hide">
-        <h2>CONCERT RESULTS</h2>
-        <button class="clearButton">Clear Results</button>
-     </article>
-    
-    <article class="itinerary">
-        <h2>MY ITINERARY</h2>
-        <h3>Park:</h3>
-        <h4 id="parkItinerary"></h4>
-        <h3>Restaurant:</h3>
-        <h4 id="restaurantItinerary"</h4>
-        <h3>Concerts:</h3>
-        <h4 id="concertItinerary"</h4>
+                <div class="search__item">
+                    <h3>Park by Activity:</h3>
+                    <select name="Parks" id="parks_features">
+                        <option value="" disabled selected>Select your park feature</option>
+                        <option value="?swimming_pool=Yes">Swimming</option>
+                        <option value="?hiking_trails=Yes">Hiking</option>
+                        <option value="?playground=Yes">Playground</option>
+                        <option value="?nature_center=Yes">Nature Centers</option>
+                        <option value="?picnic_shelters=Yes">Picnic Shelters</option>
+                        <option value="?dog_park=Yes">Dog Park</option>
+                        <option value="?mountain_bike_trails=Yes">Mountain Biking</option>
+                        <option value="?fishing_by_permit=Yes">Fishing</option>
+                    </select>
+                    <button type="button" id="parkSearch">Search</button>
+                </div>
 
 
+                <div class="search__item">
+                    <h3>Restaurant by Name:</h3>
+                    <input type="text" name="restaurantSearch" id="restaurantSearch" placeholder="Restaurant Name">
+                    <button id="restaurantSearchButton">Search</button>
+                </div>
+            </div>
 
-        
+            <article id="results" class="results hide">
+                <h2>Results:</h2>
+                <div id="results__container">
+                    <div class="results concerts" id="concertResults"></div>
+                    <div class="results parks" id="parkResults"></div>
+                    <div class="results restaurants" id="restaurantResults"></div>
+                </div>
 
+                <button id="clearButton">Clear Results</button>
+            </article>
+            <div>
+                <h2>Itinerary:</h2>
+                <article class="itinerary">
+                    <div class=itinerary__items>
+                        <div class="itinerary__item">
+                            <h3>Concert:</h3>
+                            <p id="concertItinerary"></p>
+                        </div>
+                        <div class="itinerary__item">
+                            <h3>Park:</h3>
+                            <p id="parkItinerary"></p>
+                        </div>
+                        <div class="itinerary__item">
+                            <h3>Restaurant:</h3>
+                            <p id="restaurantItinerary"></p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button id="clearItineraryButton">Clear Results</button>
+            <button type="button" id="printButton">Print this page</button>
+        </div>
+    </div>
+    <!--close content-wrapper  -->
+    <a href="#top">Back to top &raquo;</a>
+    <footer class="main-footer">
+        <p class="footer__copyright"> clandestine-voltage &copy; 2019</p>
+    </footer>
     <script src="data.js"></script>
     <script src="factory.js"></script>
     <script src="dom.js"></script>
     <script src="main.js"></script>
-    <script src="/concerts/data.js"></script>
-    <script src="/concerts/factory.js"></script>
-    <script src="/concerts/dom.js"></script>
-    <script src="/concerts/main.js"></script>
+
 </body>
+
 </html>

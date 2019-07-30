@@ -16,14 +16,11 @@ const createResultHTML = (restaurants) => {
 //address from Metro Parks object was returned as a string that LOOKED like it was an object, but wasnt'. We did not want to print to the DOM the "object". Below uses a series of .replace to target the individual characters needed to be removed. Had to string together a series of .replace to make this work. 
 
 const createParkHTML = (park) => {
-    const parkAddress = park.mapped_location.human_address
+    const parkAddress = JSON.parse(park.mapped_location.human_address)
     return `
         <section class="results__section parks">
             <h3>${park.park_name}</h3>
-            <h4>${parkAddress.replace('{"address": "', "").replace('", "city": "', ", ").replace('", "state": "', ", ").replace('", "zip": ""}', "").replace('{"address": "', "").replace('", "city": "', ", ").replace('", "state": "', ", ").replace('", "zip": ""}', "").replace('", "zip": "37206"}', "")
-            .replace('", "zip": "37080"}', "").replace('", "zip": "37013"}', "").replace('", "zip": "37138"}', "").replace('", "zip": "37211"}', "")
-            .replace('", "zip": "37212"}', "").replace('", "zip": "37205"}', "").replace('", "zip": "37027"}', "").replace('", "zip": "37214"}', "")
-            .replace('", "zip": "37209"}', "").replace('", "zip": "37076"}', "").replace('", "zip": "37115"}', "")}</h4>
+            <h4>${parkAddress.address}</h4>
             <button type="button" id="parkSaveButton">Save to Itinerary</button> 
         </section>
     `

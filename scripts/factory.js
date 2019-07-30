@@ -18,7 +18,7 @@ const createResultHTML = (restaurants) => {
 const createParkHTML = (park) => {
     const parkAddress = JSON.parse(park.mapped_location.human_address)
     return `
-        <section class="results__section parks">
+        <section class="results__section">
             <h3>${park.park_name}</h3>
             <h4>${parkAddress.address}</h4>
             <button type="button" id="parkSaveButton">Save to Itinerary</button> 

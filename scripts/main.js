@@ -35,7 +35,6 @@ concertSearchButton.addEventListener("click", () => {
                 let concertHTML = createResultsConcert(concert)
                 renderConcert(concertHTML)
             }
-
         })
 })
 
@@ -85,10 +84,13 @@ concertResultsInDOM.addEventListener("click", (event) => {
         const concertItineraryName = concertName.innerText
         const concertItineraryVenue = concertVenue.innerText
         const concertItineraryDate = concertDate.innerText
-        const concertItineraryTime = concertTime.innerText
+        let concertItineraryTime = concertTime.innerText
         const concertItineraryHTML = createItineraryConcert(concertItineraryName, concertItineraryVenue, concertItineraryDate, concertItineraryTime)
         renderConcertItinerary(concertItineraryHTML)
-    }
+        if (concertItineraryTime = "undefined") {
+            concertItineraryTime = "TBD"
+        }
+     }
 })
 
 

@@ -26,17 +26,18 @@ const createParkHTML = (park) => {
     `
 }
 
+
 const createResultsConcert = (concert) => {
     return `
         <section class="results__section">
             <h3 class="results--name">${concert.name}</h3>
+            <h4 class="results--venue">${concert._embedded.venues[0].name}</h4>
             <h4 class="results--date">${concert.dates.start.localDate}</h4>
             <p class="results--time">${concert.dates.start.localTime}</p>
             <button class="concertSaveButton">Save to Itinerary</button>
         </section>
 `
 }
-
 //Functions that create the HTML string for ITINERARY items, which will be added to the DOM
 
 const createItineraryRestaurant = (name, address) => {
@@ -60,10 +61,12 @@ const createItineraryPark = (name, address) => {
 
 
 
-const createItineraryConcert = (name, date, time) => {
+
+const createItineraryConcert = (name, venue, date, time) => {
     return `
         <section>
             <h3>${name}</h3>
+            <h4>${venue}</h4>
             <h4>${date}</h4>
             <p>${time}</p>
         </section>

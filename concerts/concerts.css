@@ -1,0 +1,206 @@
+/*------------------------------------
+  Base Styles
+------------------------------------*/
+
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('fonts/abolition-regular-webfont.eot');
+    src: url('fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/abolition-regular-webfont.woff') format('woff'), url('fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #878787;
+    margin: 0;
+    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+#results__container {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    max-height: 400px;
+    overflow: scroll;
+}
+
+.search__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between
+}
+
+
+.search__item {
+    flex-direction: column;
+}
+
+.itinerary {
+    display: flex;
+    justify-content: space-around;
+}
+
+.itinerary__item {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.itinerary__items {
+    display: flex;
+    flex-direction: row;
+}
+
+.results__section {
+    flex-basis: 30%;
+    padding: 10px;
+    margin: 10px 20px;
+    max-width: 300px;
+    background-color: #e7f1fd;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    font-family: Abolition Regular, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 5.625rem;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+    margin: 12px 0 0;
+}
+
+h2 {
+    font-size: 3.3125em;
+    /* 53px/16px  */
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 1em 0 .5em;
+    /* 0 0 26px */
+}
+
+h3 {
+    font-size: 1.5em;
+    /* 20px/16px  */
+    color: #48525c;
+    line-height: 1.2;
+    margin: 2em 0 .5em;
+    /* 34px */
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+.header {
+    padding-top: 200px;
+    height: 600px;
+    background: linear-gradient( #76AFF4, transparent 90%), linear-gradient(0deg, #fff, transparent), #76AFF4 url("images/nash.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    color: white;
+    font-size: 1.625rem;
+    letter-spacing: .065em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 5.625rem;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+    margin: 12px 0 0;
+    padding-top: 10px;
+}
+
+.intro {
+    font-size: 1.25em;
+    line-height: 1.6;
+}
+
+h1, .primary-content, .header, .main-footer {
+    text-align: center;
+}
+
+.content-wrapper {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.t-border {
+    border-top: 2px solid #dfe2e6;
+}
+
+input, select {
+   
+    border-color: #76AFF4;
+    margin-right: .5em;
+    border-radius: 4px;
+}
+
+
+button {
+    
+    background-color: #76AFF4;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    box-shadow: 3px 3px 10px #48525c;
+}
+
+#clearButton, #printButton {
+    margin-top: .5em;
+}
+
+.results {
+    padding: .5em 0;
+}
+
+a:link, a:visited {
+    color: #76AFF4;
+}
+
+a:hover {
+    color: rgb(3, 31, 65);
+}
+
+.main-footer {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: linear-gradient( #fff, transparent), linear-gradient(0deg, #76AFF4, transparent 100%);
+    color: #76AFF4;
+}
+
+a {
+    float: right;
+    margin-right: 20px;
+}
+
+.footer__copyright {
+    color: white;
+    float: left;
+    margin-left: 20px;
+}

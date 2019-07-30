@@ -80,11 +80,13 @@ concertResultsInDOM.addEventListener("click", (event) => {
         const button = event.target
         const concertTime = button.previousElementSibling
         const concertDate = concertTime.previousElementSibling
-        const concertName = concertDate.previousElementSibling
+        const concertVenue = concertDate.previousElementSibling
+        const concertName = concertVenue.previousElementSibling
         const concertItineraryName = concertName.innerText
+        const concertItineraryVenue = concertVenue.innerText
         const concertItineraryDate = concertDate.innerText
         const concertItineraryTime = concertTime.innerText
-        const concertItineraryHTML = createItineraryConcert(concertItineraryName, concertItineraryDate, concertItineraryTime)
+        const concertItineraryHTML = createItineraryConcert(concertItineraryName, concertItineraryVenue, concertItineraryDate, concertItineraryTime)
         renderConcertItinerary(concertItineraryHTML)
     }
 })
